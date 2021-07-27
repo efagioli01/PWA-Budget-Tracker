@@ -47,17 +47,16 @@ Open with Heroku link below and view the deployed application
 
 ## Screenshot
  
- ![Screenshot](./images/fitness.PNG))
- ![Screenshot](./images/capture.PNG)
+ ![Screenshot](./images/capture.PNG))
  ![Screenshot](./images/capture2.PNG)
- ![Screenshot](./images/cap3.PNG)
+
  
 <br>
 
 
 
 ## Github Repository
-[Github]()
+[Github](https://github.com/efagioli01/PWA-Budget-Tracker)
 
 <br>
 
