@@ -16,7 +16,7 @@ request.onupgradeneeded = ({ target }) => {
 }
 
 request.onsuccess = ({ target }) => {
-    let db = target.result
+     db = target.result
     if (navigator.onLine) {
         checkDataBase()
     }
@@ -24,7 +24,14 @@ request.onsuccess = ({ target }) => {
 
 request.onerror = event => console.log(event.target.errorCode)
 
+function saveRecord(record) {
+    const transaction = db.transaction(['pending'], 'readwrite')
+    const store = transaction.objectStore('pending') 
+    store.add(record)
+}
+
 function checkDataBase() {
+    console.log('hello')
     const transaction = db.transaction(['pending'], 'readwrite')
     const store = transaction.objectStore('pending')
     const getAll = store.getAll()
@@ -49,10 +56,5 @@ function checkDataBase() {
     }
 }
 
-function saveRecord(record) {
-    const transaction = db.transaction(['pending'], 'readwrite')
-    const store = transaction.objectStore('pending') 
-    store.add(record)
-}
 
 window.addEventListener('online', checkDataBase)
